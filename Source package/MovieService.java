@@ -1,9 +1,8 @@
-package com.realdolmen.examen.examenprogrammeren2.service;
+package com.realdolmen.examen.examenprogrammeren2.services;
 
 import com.realdolmen.examen.examenprogrammeren2.exceptions.NoQueryPossibleException;
-import com.realdolmen.examen.examenprogrammeren2.repository.MovieRepository;
+import com.realdolmen.examen.examenprogrammeren2.repositories.MovieRepository;
 import com.realdolmen.examen.examenprogrammeren2.domain.Movie;
-import com.sun.javafx.scene.control.skin.VirtualFlow;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;

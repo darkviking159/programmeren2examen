@@ -1,8 +1,8 @@
-package com.realdolmen.examen.examenprogrammeren2.service;
+package com.realdolmen.examen.examenprogrammeren2.services;
 
 import com.realdolmen.examen.examenprogrammeren2.exceptions.NoQueryPossibleException;
-import com.realdolmen.examen.examenprogrammeren2.service.MovieService;
-import com.realdolmen.examen.examenprogrammeren2.repository.MovieRepository;
+import com.realdolmen.examen.examenprogrammeren2.services.MovieService;
+import com.realdolmen.examen.examenprogrammeren2.repositories.MovieRepository;
 import com.realdolmen.examen.examenprogrammeren2.domain.Movie;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,10 +10,10 @@ import java.util.List;
 
 public class MovieServiceTest {
     //TODO
-    // Deel 2 Unit testen : Er is al een deel van de repository test opgesteld. Alle gegevens die je nodig hebt staan al ingevuld.
-    //Opdracht 1 : zorg ervoor dat Mockito gebruikt kan worden. Zorg dat de juiste dependency aanwezig is in pom.xml zodat je die hier kan gebruiken.
-    //Opdracht 2 : annoteer alle methoden met de juiste annotaties, en private attributen (waar nodig), zodat ze aanzien worden als test methoden. Boven sommige methoden staan tips, bekijk ze goed. 
-    //Opdracht 3 : tracht alle methoden die hieronder beschreven zijn in te vullen zodat ze slagen. Tips kan je vinden in de methoden zelf.
+    //Opdracht 3 Unit testen met Mockito : Er is al een deel van de service test opgesteld. Alle gegevens die je nodig hebt staan al ingevuld.
+    //25 : zorg ervoor dat Mockito gebruikt kan worden, over heel de klasse.
+    //26 : annoteer alle methoden met de juiste annotaties, en private attributen (waar nodig), zodat ze aanzien worden als test methoden. Boven sommige methoden staan tips, bekijk ze goed. 
+    //27 : tracht alle methoden die hieronder beschreven zijn in te vullen zodat ze slagen. Tips kan je vinden in de methoden zelf.
     
     private MovieService movieService;
     private List<Movie>movies;
@@ -21,6 +21,7 @@ public class MovieServiceTest {
 
     private MovieRepository movieRepository;
 
+	//TODO
     public void init() {
         movieService = new MovieService(movieRepository);
         movies = new ArrayList<>();

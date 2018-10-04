@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.realdolmen.examen.examenprogrammeren2.repository;
+package com.realdolmen.examen.examenprogrammeren2.repositories;
 
 import com.realdolmen.examen.examenprogrammeren2.exceptions.NoQueryPossibleException;
 import com.realdolmen.examen.examenprogrammeren2.domain.Movie;
