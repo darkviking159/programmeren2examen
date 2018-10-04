@@ -28,7 +28,7 @@ public class MovieRepository {
 
     private static final String ID = "id";
     private static final String GENRE = "genre";
-    private static final String NAME = "name";
+    private static final String TITLE = "title";
 
     public MovieRepository() {
         this(URL);
@@ -65,7 +65,7 @@ public class MovieRepository {
         try {
             movie = new Movie();
             movie.setId(resultSet.getInt(ID));
-            movie.setTitle(resultSet.getString(NAME));
+            movie.setTitle(resultSet.getString(TITLE));
             movie.setGenre(resultSet.getString(GENRE));
         } catch (SQLException ex) {
             ex.printStackTrace();
