@@ -6,6 +6,7 @@
 package com.realdolmen.examen.repositories;
 
 import com.realdolmen.examen.examenprogrammeren2jirkaruzicka.Movie;
+import com.realdolmen.examen.exeptions.NoQueryPossibleException;
 import java.util.List;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -30,16 +31,22 @@ import static org.junit.Assert.*;
     
     
     //TODO maak een test voor MovieRepository.find()
+    @Test
     public void findTestSucces() throws Exception {
         //Geef als parameter de String "SELECT * FROM movies" mee
         MovieRepository Movierepository = new MovieRepository();
+        List<Movie> Movies = Movierepository.find("SELECT * FROM movies");
+        assertFalse(Movies.isEmpty());
         //Doe de nodige check om een succesvolle test te krijgen indien nodig
     }
     
     
     //TODO maak een test voor MovieRepository.find()
+    @Test(expected = NoQueryPossibleException.class)
     public void findTestWrongQueryThrowsNoQueryPossibleException() throws Exception{
         //Geef als parameter de String "SELECT tieeel FROM movies" mee
-        
+        MovieRepository Movierepository = new MovieRepository();
+        List<Movie> Movies = Movierepository.find("SELECT tieeel FROM movies");
+        assertFalse(Movies.isEmpty());
         //Doe de nodige check om een succesvolle test te krijgen indien nodig
     }}
